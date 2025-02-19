@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 from calculator_1 import add, sub, mul, div
 
-a = 10
-b = 5
+num1 = 10
+num2 = 5
 
 if __name__ == "__main__":
-    print("{} + {} = {}".format(a, b, add(a, b)))
-    print("{} - {} = {}".format(a, b, sub(a, b)))
-    print("{} * {} = {}".format(a, b, mul(a, b)))
-    print("{} / {} = {}".format(a, b, div(a, b)))
+    print("{} + {} = {}".format(num1, num2, add(num1, num2)))
+    print("{} - {} = {}".format(num1, num2, sub(num1, num2)))
+    print("{} * {} = {}".format(num1, num2, mul(num1, num2)))
+    print("{} / {} = {}".format(num1, num2, div(num1, num2)))

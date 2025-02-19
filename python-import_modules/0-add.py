@@ -2,8 +2,8 @@
 
 from add_0 import add
 
-a = 1
-b = 2
+n1 = 1
+n2 = 2
 
 if __name__ == "__main__":
-    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} + {} = {}".format(n1, n2, add(n1, n2)))
