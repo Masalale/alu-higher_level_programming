@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-from 0-add import add
-from 1-subtract import subtract
-from 1-multiply import multiply
+from calculator_1 import add, sub, mul, div
+
+a = 10
+b = 5
 
 if __name__ == "__main__":
-    print("Addition:", add(5, 3))
-    print("Subtraction:", subtract(5, 3))
-    print("Multiplication:", multiply(5, 3))
-    
+    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} - {} = {}".format(a, b, sub(a, b)))
+    print("{} * {} = {}".format(a, b, mul(a, b)))
+    print("{} / {} = {}".format(a, b, div(a, b)))
+
