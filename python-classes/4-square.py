@@ -1,22 +1,22 @@
 #!/usr/bin/python3
-# Square class with getter and setter
+"""Module that defines a Square class with property accessors."""
 
 
 class Square:
-    # Square class with property accessors
+    """Square class with getter and setter for the size attribute."""
 
     def __init__(self, size=0):
-        # Initialize square with optional size
+        """Initialize a new Square instance with optional size."""
         self.size = size
 
     @property
     def size(self):
-        # Get the size of the square
+        """Retrieve the current size of the square."""
         return self.__size
 
     @size.setter
     def size(self, value):
-        # Set the size with validation
+        """Set the size of the square with validation."""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
@@ -24,5 +24,5 @@ class Square:
         self.__size = value
 
     def area(self):
-        # Return the current square area
+        """Calculate the area of the square."""
         return self.__size ** 2

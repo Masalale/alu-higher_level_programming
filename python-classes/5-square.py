@@ -1,22 +1,22 @@
 #!/usr/bin/python3
-# Square class with print capability
+"""Module that defines a Square class with printing capability."""
 
 
 class Square:
-    # Square class with display method
+    """Square class with methods to set/get size, calculate area and print itself."""
 
     def __init__(self, size=0):
-        # Initialize square with optional size
+        """Initialize a new Square instance with optional size."""
         self.size = size
 
     @property
     def size(self):
-        # Get the size of the square
+        """Retrieve the current size of the square."""
         return self.__size
 
     @size.setter
     def size(self, value):
-        # Set the size with validation
+        """Set the size of the square with validation."""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
@@ -24,11 +24,11 @@ class Square:
         self.__size = value
 
     def area(self):
-        # Return the current square area
+        """Calculate the area of the square."""
         return self.__size ** 2
 
     def my_print(self):
-        # Print the square using # characters
+        """Print a visual representation of the square using # characters."""
         if self.__size == 0:
             print()
         else:
