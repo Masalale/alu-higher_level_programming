@@ -3,7 +3,7 @@
 
 
 class Square:
-    """Square class with methods to set/get size, calculate area and print itself."""
+    """Square class with methods to set/get size, calculate area and print."""
 
     def __init__(self, size=0):
         """Initialize a new Square instance with optional size."""
