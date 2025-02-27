@@ -1,13 +1,19 @@
 # Python - Classes
 
-This repository contains Python scripts demonstrating Object-Oriented Programming concepts.
+This repository contains my work with Python classes and OOP concepts.
 
-## Files Description
+## What's in here?
 
-* `0-square.py` - Defines an empty Square class
-* `1-square.py` - Implements Square class with private size attribute
-* `2-square.py` - Extends Square class with input validation
-* `3-square.py` - Adds area() method to calculate square area
-* `4-square.py` - Implements getter and setter for size
-* `5-square.py` - Adds my_print() method to display the square
-* `6-square.py` - Adds position attribute to control display
+I've created a series of Python scripts that build on each other to demonstrate 
+object-oriented programming principles. Each file adds new functionality to a 
+Square class.
+
+## Files
+
+* `0-square.py` - Super simple empty class (starting point)
+* `1-square.py` - Basic Square with private size attribute
+* `2-square.py` - Added validation to make sure size is valid
+* `3-square.py` - Added an area() method - now it does something useful!
+* `4-square.py` - Getter/setter for size attribute (encapsulation)
+* `5-square.py` - Added visual representation with my_print()
+* `6-square.py` - Position attribute to control where the square appears
