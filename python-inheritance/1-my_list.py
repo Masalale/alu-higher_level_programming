@@ -1,5 +1,3 @@
-import doctest
-
 #!/usr/bin/python3
 """Module that defines MyList class inheriting from list"""
 
@@ -13,5 +11,3 @@ class MyList(list):
         All elements are assumed to be integers.
         """
         print(sorted(self))
-        if __name__ == "__main__":
-            doctest.testfile("tests/1-my_list.txt")
