@@ -84,8 +84,8 @@ class Rectangle:
         Returns:
             str: String that can be used with eval() to recreate the instance
         """
-        return f"Rectangle({self.__width}, {self.__height})"
-    
+        return f"Rectangle({self.width}, {self.height})"
+
     def __del__(self):
         """Print a message when an instance of Rectangle is deleted"""
         Rectangle.number_of_instances -= 1
