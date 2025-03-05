@@ -86,9 +86,10 @@ class Rectangle:
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
 
-        if rect_1.area() >= rect_2.area():
-            return rect_1
-        return rect_2
+        # Direct comparison without calling area() twice if they're equal
+        area1 = rect_1.area()
+        area2 = rect_2.area()
+        return rect_1 if area1 >= area2 else rect_2
 
     def __str__(self):
         """Return the string representation of the rectangle
@@ -99,11 +100,9 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-
-        rect = []
-        for i in range(self.__height):
-            rect.append(str(self.print_symbol) * self.__width)
-        return "\n".join(rect)
+        # More efficient one-liner with list comprehension
+        return "\n".join([str(self.print_symbol) * self.__width 
+                          for _ in range(self.__height)])
 
     def __repr__(self):
         """Return a string representation to recreate the rectangle

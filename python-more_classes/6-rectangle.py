@@ -73,10 +73,8 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        rect = []
-        for i in range(self.__height):
-            rect.append("#" * self.__width)
-        return "\n".join(rect)
+        # More efficient one-liner with list comprehension
+        return "\n".join(["#" * self.__width for _ in range(self.__height)])
 
     def __repr__(self):
         """Return a string representation to recreate the rectangle
@@ -84,7 +82,8 @@ class Rectangle:
         Returns:
             str: String that can be used with eval() to recreate the instance
         """
-        return f"Rectangle({self.width}, {self.height})"
+        # Use private attributes to avoid properties overhead
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         """Print a message when an instance of Rectangle is deleted"""
