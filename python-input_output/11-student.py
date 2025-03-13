@@ -12,7 +12,6 @@ class Student:
     def __init__(self, first_name, last_name, age):
         """
         Initialize a Student instance
-        
         Args:
             first_name: student's first name
             last_name: student's last name
@@ -25,11 +24,9 @@ class Student:
     def to_json(self, attrs=None):
         """
         Returns dictionary representation of a Student instance
-        
         Args:
             attrs: List of attributes to include in the dictionary
                    If None, include all attributes
-                   
         Returns:
             Dictionary with the requested attributes
         """
@@ -45,7 +42,6 @@ class Student:
     def reload_from_json(self, json):
         """
         Replaces all attributes of the Student instance
-        
         Args:
             json: Dictionary where keys are attribute names
                   and values are attribute values

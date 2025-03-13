@@ -25,11 +25,10 @@ class Student:
     def to_json(self, attrs=None):
         """
         Returns dictionary representation of a Student instance
-        
+
         Args:
             attrs: List of attributes to include in the dictionary
                    If None, include all attributes
-                   
         Returns:
             Dictionary with the requested attributes
         """

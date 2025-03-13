@@ -7,12 +7,9 @@ Function to generate Pascal's Triangle
 def pascal_triangle(n):
     """
     Returns a list of lists of integers representing Pascal's triangle of n
-    
     Returns empty list if n <= 0
-    
     Args:
         n: number of rows to generate
-        
     Returns:
         List of lists representing Pascal's triangle
     """
