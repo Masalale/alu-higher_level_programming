@@ -7,6 +7,6 @@ GRANT SELECT, INSERT ON user_2_db.* TO 'user_0d_2'@'localhost';
 
 FLUSH PRIVILEGES;
 
--- Script that lists all privileges of users user_0d_1 and user_0d_2
-SHOW GRANTS FOR 'user_0d_1'@'localhost';
-SHOW GRANTS FOR 'user_0d_2'@'localhost';
+-- -- Script that lists all privileges of users user_0d_1 and user_0d_2
+-- SHOW GRANTS FOR 'user_0d_1'@'localhost';
+-- SHOW GRANTS FOR 'user_0d_2'@'localhost';
