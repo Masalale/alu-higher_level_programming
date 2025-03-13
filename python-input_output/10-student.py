@@ -12,7 +12,6 @@ class Student:
     def __init__(self, first_name, last_name, age):
         """
         Initialize a Student instance
-        
         Args:
             first_name: student's first name
             last_name: student's last name
@@ -34,7 +33,6 @@ class Student:
         """
         if attrs is None:
             return self.__dict__
-        
         filtered_dict = {}
         for attr in attrs:
             if hasattr(self, attr):
