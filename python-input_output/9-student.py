@@ -12,7 +12,6 @@ class Student:
     def __init__(self, first_name, last_name, age):
         """
         Initialize a Student instance
-        
         Args:
             first_name: student's first name
             last_name: student's last name
