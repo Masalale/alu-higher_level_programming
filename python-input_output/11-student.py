@@ -32,7 +32,6 @@ class Student:
         """
         if attrs is None:
             return self.__dict__
-        
         filtered_dict = {}
         for attr in attrs:
             if hasattr(self, attr):
