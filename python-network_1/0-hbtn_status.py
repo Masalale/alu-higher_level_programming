@@ -6,7 +6,7 @@ import urllib.request
 
 
 if __name__ == "__main__":
-    url = "https://intranet.hbtn.io/status"
+    url = "https://httpbin.org/status/200"
     
     with urllib.request.urlopen(url) as response:
         body = response.read()
