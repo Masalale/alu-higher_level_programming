@@ -1,17 +1,32 @@
 #!/usr/bin/python3
-print_square = __import__('4-print_square').print_square
+"""
+Print square module - provides a function to print a square using # characters
+"""
 
-print_square(4)
-print("")
-print_square(10)
-print("")
-print_square(0)
-print("")
-print_square(1)
-print("")
-try:
-    print_square(-1)
-except Exception as e:
-    print(e)
-print("")
 
+def print_square(size):
+    """
+    Prints a square made of # characters
+
+    Args:
+        size: The length of the square
+
+    Raises:
+        TypeError: If size is not an integer or is a negative float
+        ValueError: If size is a negative integer
+    """
+    # Check if size is a float (both positive and negative)
+    if isinstance(size, float):
+        raise TypeError("size must be an integer")
+
+    # Check if size is an integer
+    if not isinstance(size, int):
+        raise TypeError("size must be an integer")
+
+    # Check if size is negative
+    if size < 0:
+        raise ValueError("size must be >= 0")
+
+    # Print the square
+    for _ in range(size):
+        print("#" * size)
