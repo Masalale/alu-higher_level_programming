@@ -1,3 +1,3 @@
 #!/bin/bash
-# Script that displays the body of a 200 status code response
+# Gets the body of a 200 response - fails silently if not 200 OK
 curl -sfL "$1" -X GET
