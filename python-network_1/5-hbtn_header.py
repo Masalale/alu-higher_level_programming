@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Python script that displays the X-Request-Id header from a URL response
+Script to get the X-Request-Id header value
 """
 import requests
 import sys

@@ -1,23 +1,24 @@
 #!/usr/bin/python3
 """
-Python script that sends a POST request with a letter parameter
-and handles the JSON response
+Script to search for users with a given letter
 """
 import requests
 import sys
 if __name__ == "__main__":
-    # Set the letter parameter (q) - empty string if no argument provided
+    # Get search term or use empty
     q = sys.argv[1] if len(sys.argv) > 1 else ""
-    # URL to send the POST request to
+    # Server endpoint
     url = "http://0.0.0.0:5000/search_user"
-    # Send POST request with the letter as parameter
+    # Post the search term
     r = requests.post(url, data={'q': q})
-    # Try to parse the JSON response
+    # Handle response
     try:
         response_json = r.json()
-        # Check if the JSON response is empty
+        # Check if we got results
         if response_json:
-            print("[{}] {}".format(response_json.get('id'), response_json.get('name')))
+            print("[{}] {}".format(
+                response_json.get('id'),
+                response_json.get('name')))
         else:
             print("No result")
     except ValueError:

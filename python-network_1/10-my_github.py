@@ -1,18 +1,17 @@
 #!/usr/bin/python3
 """
-Python script that takes GitHub credentials and uses the GitHub API
-to display the user's ID
+Script to get GitHub user ID using credentials
 """
 import requests
 import sys
 if __name__ == "__main__":
-    # Get GitHub username and personal access token from command line arguments
+    # Get auth info from args
     username = sys.argv[1]
     token = sys.argv[2]
-    # GitHub API URL to get user information
+    # API endpoint
     url = "https://api.github.com/user"
-    # Send GET request with Basic Authentication
+    # Make authenticated request
     response = requests.get(url, auth=(username, token))
-    # Parse the JSON response and display user ID
+    # Extract and print user ID
     json_data = response.json()
     print(json_data.get('id'))
