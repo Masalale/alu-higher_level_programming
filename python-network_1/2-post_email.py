@@ -7,14 +7,13 @@ import urllib.request
 import urllib.parse
 import sys
 
-
 if __name__ == "__main__":
     url = sys.argv[1]
     email = sys.argv[2]
-    
+
     # Prepare the data for POST request
     data = urllib.parse.urlencode({'email': email}).encode('utf-8')
-    
+
     # Send POST request and get response
     with urllib.request.urlopen(url, data=data) as response:
         # Read and decode response body
