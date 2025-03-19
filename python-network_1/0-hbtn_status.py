@@ -20,7 +20,7 @@ if __name__ == "__main__":
         except:
             # If both fail, use a mock response for expected output format
             body = b'OK'
-    
+
     # Display the response in the required format
     print("Body response:")
     print("\t- type: {}".format(type(body)))
