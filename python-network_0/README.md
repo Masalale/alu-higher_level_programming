@@ -1,0 +1,2 @@
+## Description
+This project focuses on understanding HTTP protocols, making network requests in Python, and learning about web interactions. It covers concepts related to URLs, HTTP methods, headers, and using tools like curl for web requests.
