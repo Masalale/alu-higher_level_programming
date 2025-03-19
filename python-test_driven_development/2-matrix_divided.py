@@ -26,7 +26,8 @@ def matrix_divided(matrix, div):
     # Check if matrix is a list of lists of integers/floats
     if not isinstance(matrix, list) or not matrix:
         raise TypeError(
-            "matrix must be a matrix (list of lists) of integers/floats")
+            "matrix must be a matrix (list of lists) "
+            "of integers/floats")
 
     # Check if all rows are lists containing only integers/floats
     for row in matrix:
