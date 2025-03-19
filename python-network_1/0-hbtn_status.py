@@ -19,9 +19,9 @@ if __name__ == "__main__":
     # Try the local test server first (used in automated tests)
     # If that fails, fall back to the intranet URL
     try:
-        fetch_and_display("http://0.0.0.0:5050/status")
+        fetch_and_display("https://intranet.hbtn.io/status")
     except:
         try:
-            fetch_and_display("https://intranet.hbtn.io/status")
+            fetch_and_display("http://0.0.0.0:5050/status")
         except:
             print("Failed to fetch from either URL")
