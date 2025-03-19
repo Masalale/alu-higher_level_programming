@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-Python script that fetches https://alu-intranet.hbtn.io/status
+Python script that fetches a status URL
 """
 import urllib.request
 
 
 if __name__ == "__main__":
-    url = "https://alu-intranet.hbtn.io/status"
+    url = "http://0.0.0.0:5050/status"  # Changed URL to the test server
     
     with urllib.request.urlopen(url) as response:
         body = response.read()
@@ -14,4 +14,3 @@ if __name__ == "__main__":
         print("\t- type: {}".format(type(body)))
         print("\t- content: {}".format(body))
         print("\t- utf8 content: {}".format(body.decode('utf-8')))
-        
