@@ -1,0 +1,73 @@
+Test cases for 5-text_indentation module
+=======================================
+
+This module provides a function that adds two new lines after '.', '?', and ':' characters.
+
+Import the function:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test with a simple string containing periods:
+    >>> text_indentation("Hello. World.")
+    Hello.
+    <BLANKLINE>
+    World.
+    <BLANKLINE>
+
+Test with multiple special characters:
+    >>> text_indentation("Hello. How are you? Fine: thanks.")
+    Hello.
+    <BLANKLINE>
+    How are you?
+    <BLANKLINE>
+    Fine:
+    <BLANKLINE>
+    thanks.
+    <BLANKLINE>
+
+Test with leading and trailing spaces:
+    >>> text_indentation("   Hello.   World.   ")
+    Hello.
+    <BLANKLINE>
+    World.
+    <BLANKLINE>
+
+Test with spaces after special characters:
+    >>> text_indentation("Hello.   World")
+    Hello.
+    <BLANKLINE>
+    World
+
+Test with no special characters:
+    >>> text_indentation("Hello World")
+    Hello World
+
+Test with empty string:
+    >>> text_indentation("")
+
+Test with only special characters:
+    >>> text_indentation(".?:")
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Test for TypeError when text is not a string:
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Test with None:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Test with newlines in input:
+    >>> text_indentation("Hello.\nWorld.")
+    Hello.
+    <BLANKLINE>
+    World.
+    <BLANKLINE>

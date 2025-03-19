@@ -18,6 +18,6 @@ def add_integer(a, b=98):
 
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
-    
+
     # Convert to integers and return sum
     return int(a) + int(b)

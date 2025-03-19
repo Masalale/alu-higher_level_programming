@@ -1,0 +1,61 @@
+Test cases for 4-print_square module
+===================================
+
+This module provides a function to print a square using # characters.
+
+Import the function:
+    >>> print_square = __import__('4-print_square').print_square
+
+Test printing squares of different sizes:
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+    >>> print_square(1)
+    #
+
+    >>> print_square(0)
+    
+
+Test for TypeError when size is not an integer:
+    >>> print_square("string")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> print_square(3.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> print_square(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+Test for ValueError when size is a negative integer:
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+Test for TypeError when size is a negative float:
+    >>> print_square(-3.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+Test with very large size:
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
