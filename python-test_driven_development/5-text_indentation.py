@@ -31,7 +31,7 @@ def text_indentation(text):
     # Process each character
     while i < len(text):
         print(text[i], end="")
-    
+
         # Add two newlines after special characters
         if text[i] in ".?:":
             print("\n\n", end="")
