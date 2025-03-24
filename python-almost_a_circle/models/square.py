@@ -34,7 +34,7 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         """Set the size of the square
-        
+
         Updates both width and height to maintain a square shape.
         Uses the width validation from Rectangle.
         """
