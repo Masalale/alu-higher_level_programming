@@ -104,7 +104,7 @@ class Rectangle(Base):
         """
         for _ in range(self.height):
             print("#" * self.width)
-            
+
     def __str__(self):
         """Return a string representation of the Rectangle
 
