@@ -3,6 +3,7 @@
 Base module - foundation for all classes in the project
 """
 import json
+import os
 
 
 class Base:
@@ -39,7 +40,7 @@ class Base:
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
-
+        
     @classmethod
     def save_to_file(cls, list_objs):
         """Write the JSON string representation of list_objs to a file
@@ -47,17 +48,17 @@ class Base:
         Args:
             cls: Class itself
             list_objs: List of instances who inherit from Base
-
+        
         Note:
             The file will be overwritten if it already exists
         """
         # Create filename based on class name
         filename = cls.__name__ + ".json"
-
+        
         # Handle None case by creating an empty list
         if list_objs is None:
             list_objs = []
-
+            
         # Convert instances to dictionaries
         json_list = [obj.to_dictionary() for obj in list_objs]
 
@@ -106,3 +107,33 @@ class Base:
         dummy.update(**dictionary)
 
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances from a file
+
+        Args:
+            cls: Class itself
+
+        Returns:
+            List of instances of the class
+            Empty list if the file doesn't exist
+        """
+        # Build the filename based on the class name
+        filename = cls.__name__ + ".json"
+
+        # Check if the file exists
+        if not os.path.exists(filename):
+            return []
+
+        # Read the file content
+        with open(filename, "r") as file:
+            json_str = file.read()
+
+        # Convert JSON string to list of dictionaries
+        list_dicts = cls.from_json_string(json_str)
+
+        # Create instances from dictionaries
+        instances = [cls.create(**d) for d in list_dicts]
+
+        return instances
