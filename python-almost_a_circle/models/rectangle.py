@@ -3,7 +3,6 @@
 Rectangle module - implements Rectangle class that inherits from Base
 """
 
-
 from models.base import Base
 
 
@@ -40,7 +39,11 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        """Set the width of the rectangle"""
+        """Set the width of the rectangle with validation"""
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -50,7 +53,11 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        """Set the height of the rectangle"""
+        """Set the height of the rectangle with validation"""
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
@@ -60,7 +67,11 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        """Set the x coordinate of the rectangle"""
+        """Set the x coordinate of the rectangle with validation"""
+        if type(value) is not int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -70,5 +81,9 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        """Set the y coordinate of the rectangle"""
+        """Set the y coordinate of the rectangle with validation"""
+        if type(value) is not int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
