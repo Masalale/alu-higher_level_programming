@@ -95,3 +95,12 @@ class Rectangle(Base):
             The area value (width * height)
         """
         return self.width * self.height
+
+    def display(self):
+        """Display the rectangle using # characters
+
+        Prints a visual representation of the rectangle
+        using # symbols for each unit of width and height
+        """
+        for _ in range(self.height):
+            print("#" * self.width)
