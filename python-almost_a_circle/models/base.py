@@ -104,5 +104,5 @@ class Base:
 
         # Update the dummy instance with the real values
         dummy.update(**dictionary)
-        
+
         return dummy
