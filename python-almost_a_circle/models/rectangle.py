@@ -121,7 +121,7 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update the rectangle attributes
 
         Args:
@@ -131,11 +131,20 @@ class Rectangle(Base):
                 3rd argument should be height
                 4th argument should be x
                 5th argument should be y
+            **kwargs: Variable length keyword argument dictionary
+                Each key represents an attribute to update
         """
-        # Map attributes to their positions in args
-        attrs = ['id', 'width', 'height', 'x', 'y']
+        # If args exists and is not empty, use positional arguments
+        if args and len(args) > 0:
+            # Map attributes to their positions in args
+            attrs = ['id', 'width', 'height', 'x', 'y']
 
-        # Update each attribute based on position in args
-        for i, arg in enumerate(args):
-            if i < len(attrs):
-                setattr(self, attrs[i], arg)
+            # Update each attribute based on position in args
+            for i, arg in enumerate(args):
+                if i < len(attrs):
+                    setattr(self, attrs[i], arg)
+        # Otherwise use keyword arguments
+        else:
+            # Update attributes based on provided keyword arguments
+            for key, value in kwargs.items():
+                setattr(self, key, value)
