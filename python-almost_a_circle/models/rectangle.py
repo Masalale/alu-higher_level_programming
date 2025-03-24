@@ -100,10 +100,17 @@ class Rectangle(Base):
         """Display the rectangle using # characters
 
         Prints a visual representation of the rectangle
-        using # symbols for each unit of width and height
+        using # symbols, taking into account x and y coordinates
+        for positioning.
         """
+        # Print y offset as empty lines
+        for _ in range(self.y):
+            print()
+
+        # For each row of the rectangle
         for _ in range(self.height):
-            print("#" * self.width)
+            # Print x offset as spaces, then the row of # symbols
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         """Return a string representation of the Rectangle
