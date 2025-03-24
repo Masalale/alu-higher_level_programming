@@ -120,3 +120,22 @@ class Rectangle(Base):
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """Update the rectangle attributes
+
+        Args:
+            *args: Variable length argument list
+                1st argument should be id
+                2nd argument should be width
+                3rd argument should be height
+                4th argument should be x
+                5th argument should be y
+        """
+        # Map attributes to their positions in args
+        attrs = ['id', 'width', 'height', 'x', 'y']
+
+        # Update each attribute based on position in args
+        for i, arg in enumerate(args):
+            if i < len(attrs):
+                setattr(self, attrs[i], arg)
