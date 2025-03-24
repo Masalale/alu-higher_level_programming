@@ -2,6 +2,7 @@
 """
 Base module - foundation for all classes in the project
 """
+import json
 
 
 class Base:
@@ -23,3 +24,18 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Convert a list of dictionaries to a JSON string
+
+        Args:
+            list_dictionaries: List of dictionaries
+
+        Returns:
+            JSON string representation of the list of dictionaries
+            "[]" if list_dictionaries is None or empty
+        """
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
+        return json.dumps(list_dictionaries)
