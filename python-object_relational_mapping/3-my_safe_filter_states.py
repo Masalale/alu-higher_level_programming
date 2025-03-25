@@ -28,7 +28,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute the query using parameterized query to prevent SQL injection
-    # The %s placeholder is replaced safely with the value in the execute() method
+    # The %s placeholder is replaced safely with the value in the execute()
+    # method
     query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
     cursor.execute(query, (state_name,))
 
