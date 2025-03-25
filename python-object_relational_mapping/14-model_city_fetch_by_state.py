@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # Query all City objects joined with their State objects
     query = session.query(City, State).join(State, City.state_id == State.id)
-    
+
     # Order by city id
     query = query.order_by(City.id)
 
