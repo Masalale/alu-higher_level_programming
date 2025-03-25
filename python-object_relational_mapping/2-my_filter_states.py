@@ -29,8 +29,8 @@ if __name__ == "__main__":
 
     # Create the SQL query with the user input using format
     # BINARY keyword makes the comparison case-sensitive
-    query = "SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id ASC".format(
-        state_name)
+    query = ("SELECT * FROM states WHERE BINARY name = '{}' "
+             "ORDER BY id ASC".format(state_name))
 
     # Execute the query
     cursor.execute(query)
