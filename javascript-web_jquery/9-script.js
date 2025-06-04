@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
   $.ajax({
     url: 'https://fourtonfish.com/hellosalut/?lang=fr',
     type: 'GET',
