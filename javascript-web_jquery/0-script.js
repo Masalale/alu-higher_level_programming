@@ -1,5 +1,3 @@
-#!/usr/bin/node
-
 document.addEventListener('DOMContentLoaded', function () {
   const headerElement = document.querySelector('header');
   if (headerElement) {
